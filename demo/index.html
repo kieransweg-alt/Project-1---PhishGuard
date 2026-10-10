@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PhishGuard demo pages</title>
+    <style>
+      body { font: 15px/1.5 system-ui, sans-serif; max-width: 640px; margin: 40px auto; padding: 0 16px; }
+      code { background: #f1f3f4; padding: 1px 4px; border-radius: 4px; }
+    </style>
+  </head>
+  <body>
+    <h1>PhishGuard demo pages</h1>
+    <p>
+      Safe, local pages that trigger PhishGuard's form detectors. Nothing here sends data anywhere:
+      every "attacker" endpoint is <code>example.net</code>, a domain reserved for documentation.
+    </p>
+    <ul>
+      <li><a href="fake-login-external.html">Login form that posts your password to another site</a></li>
+      <li><a href="fake-login-http.html">Login form that posts over plain HTTP</a></li>
+      <li><a href="dynamic-swap.html">Form whose action is swapped by JavaScript after load</a></li>
+      <li><a href="safe-login.html">A normal login form (should stay quiet)</a></li>
+    </ul>
+    <p>
+      URL-based detectors (lookalike domains like <code>paypa1.com</code>) are skipped on
+      <code>localhost</code>, so they're covered by the unit tests instead. See the README for how
+      to try them in the browser with a hosts-file entry.
+    </p>
+  </body>
+</html>

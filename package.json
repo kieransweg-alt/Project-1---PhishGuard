@@ -1,0 +1,14 @@
+{
+  "name": "phishguard-extension",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Browser extension that detects phishing attempts in real time.",
+  "license": "MIT",
+  "scripts": {
+    "test": "node --test",
+    "icons": "node scripts/make-icons.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

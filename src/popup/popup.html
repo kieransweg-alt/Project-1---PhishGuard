@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>PhishGuard</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <header>
+      <img src="../../icons/icon32.png" alt="" width="20" height="20" />
+      <span>PhishGuard</span>
+    </header>
+
+    <main id="unsupported" hidden>
+      <p class="muted">PhishGuard only scans regular http/https pages.</p>
+    </main>
+
+    <main id="report" hidden>
+      <div class="host" id="host"></div>
+      <div class="verdict" id="verdict">
+        <div class="score" id="score"></div>
+        <div>
+          <div class="level" id="level"></div>
+          <div class="muted" id="summary"></div>
+        </div>
+      </div>
+
+      <h2>Findings</h2>
+      <ul id="findings"></ul>
+
+      <section id="chain-section" hidden>
+        <h2>Redirect chain</h2>
+        <ol id="chain"></ol>
+      </section>
+
+      <button id="trust"></button>
+    </main>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

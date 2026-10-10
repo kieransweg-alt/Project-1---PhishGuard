@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Normal login</title>
+    <style>
+      body { font: 15px/1.5 system-ui, sans-serif; max-width: 380px; margin: 60px auto; padding: 0 16px; }
+      input, button { display: block; width: 100%; margin: 8px 0; padding: 8px; font: inherit; box-sizing: border-box; }
+    </style>
+  </head>
+  <body>
+    <h1>Normal login</h1>
+    <p>Expected: no banner and no warning. The form posts to this same site.</p>
+    <form action="/session" method="post">
+      <input name="email" type="email" placeholder="Email" />
+      <input name="password" type="password" placeholder="Password" />
+      <button type="submit">Log in</button>
+    </form>
+    <p><a href="index.html">Back to demos</a></p>
+  </body>
+</html>

